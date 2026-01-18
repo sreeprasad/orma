@@ -4,14 +4,53 @@ import { generateCards } from './utils/generateCards';
 
 function App() {
     const [cards, setCards] = useState(generateCards('easy'));
+    const [flippedIds, setFlippedIds] = useState<number[]>([]);
 
     const handleClick = (id: number) => {
+
+        const clickedCard = cards.find(card => card.id === id);
+        if (flippedIds.length === 2) return;
+        if (clickedCard?.flipped || clickedCard?.matched) return;
+
+
         setCards(prevCards =>
             prevCards.map(card => card.id === id
                 ? {...card, flipped: !card.flipped } :
                 card
             )
         );
+
+        const newFlippedIds = [...flippedIds, id];
+        setFlippedIds(newFlippedIds);
+        if (newFlippedIds.length === 2) {
+            const [firstId, secondId] = newFlippedIds;
+            const firstCard = cards.find(card => card.id === firstId);
+            const secondCard = cards.find(card => card.id === secondId);
+            if (firstCard?.animalId === secondCard?.animalId){
+                setCards(prevCards =>
+                    prevCards.map(card => card.id === firstId || card.id === secondId
+                        ? {...card, matched: true} :
+                        card
+                    )
+                );
+                setFlippedIds([])
+            } else {
+                setTimeout(() => {
+
+                    setCards(prevCards =>
+                        prevCards.map(card => card.id === firstId || card.id === secondId
+                            ? {...card, flipped: false} :
+                            card
+                        )
+                    );
+
+                    setFlippedIds([])
+
+                }, 1000)
+
+            }
+        }
+
     };
 
     return (

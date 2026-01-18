@@ -54,14 +54,14 @@ function App() {
     };
 
     return (
-        <div style={{ padding: '20px' }}>
-            <h1>Memory Game</h1>
-            <div className="grid grid-cols-4 gap-4">
+        <div className="h-screen p-4 flex flex-col items-center bg-gray-900">
+            <h1 className="text-2xl font-bold mb-4 text-white">Memory Game</h1>
+            <div className="grid grid-cols-4 gap-2 w-full max-w-4xl">
                 {cards.map(card => (
                     <Card
                         key={card.id}
                         card={card}
-                        onClick={()=> handleClick(card.id)}
+                        onClick={() => handleClick(card.id)}
                         disabled={false}
                     />
                 ))}

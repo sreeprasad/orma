@@ -25,14 +25,14 @@ export function Card({ card, onClick, disabled }: CardProps) {
                 [transform-style:preserve-3d]
                 ${isFlipped ? '[transform:rotateY(180deg)]' : ''}
             `}>
-         
                 <div className={`
                     absolute w-full h-full
                     [backface-visibility:hidden]
-                    bg-purple-600 rounded-lg
+                    bg-gradient-to-br from-slate-700 to-indigo-600
+                    rounded-lg
                     flex items-center justify-center
-                    border-2 border-purple-400
-                    hover:bg-purple-500
+                    border-2 border-slate-500
+                    hover:from-slate-600 hover:to-indigo-500
                 `}>
                     <span className="text-4xl text-white">?</span>
                 </div>

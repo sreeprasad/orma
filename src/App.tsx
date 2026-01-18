@@ -7,7 +7,7 @@ function App() {
 
     const handleClick = (id: number) => {
         setCards(prevCards =>
-            prevCards.map(card => card.id == id
+            prevCards.map(card => card.id === id
                 ? {...card, flipped: !card.flipped } :
                 card
             )

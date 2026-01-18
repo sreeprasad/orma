@@ -5,8 +5,7 @@ import {shuffle} from './shuffle';
 
 const PAIRS_BY_DIFFICULTY: Record<Difficulty, number> = {
     easy: 6,
-    medium: 14,
-    hard: 28,
+    hard: 14,
 };
 
 export function generateCards(difficulty: Difficulty): Card[] {

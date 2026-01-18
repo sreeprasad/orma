@@ -1,4 +1,4 @@
-export type Difficulty = 'easy' | 'medium' | 'hard';
+export type Difficulty = 'easy' | 'hard';
 export type GameMode = 'single' | 'two-player';
 
 

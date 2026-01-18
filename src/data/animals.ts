@@ -1,0 +1,33 @@
+import type {Animal} from '../types';
+
+
+export const ANIMALS: Animal[] = [
+    { id: 1, image: '/animals-optimized/aj-robsin-BuQ1RZckYW4-unsplash.webp' },
+    { id: 2, image: '/animals-optimized/alejandro-contreras-wTPp323zAEw-unsplash.webp' },
+    { id: 3, image: '/animals-optimized/alexander-rotker-vfpEGM0RCk4-unsplash.webp' },
+    { id: 4, image: '/animals-optimized/andy-holmes-D6TqIa-tWRY-unsplash.webp' },
+    { id: 5, image: '/animals-optimized/cosmic-timetraveler-vU4R5PyEO4k-unsplash.webp' },
+    { id: 6, image: '/animals-optimized/david-clode-7_TTPznVIQI-unsplash.webp' },
+    { id: 7, image: '/animals-optimized/david-clode-djswadct1ps-unsplash.webp' },
+    { id: 8, image: '/animals-optimized/deepak-nautiyal-Nbv7PkL_rvI-unsplash.webp' },
+    { id: 9, image: '/animals-optimized/dusan-veverkolog-ah7KHxYg6Ow-unsplash.webp' },
+    { id: 10, image: '/animals-optimized/edgar-nKC772R_qog-unsplash.webp' },
+    { id: 11, image: '/animals-optimized/eric-welch-XucH5JNRFig-unsplash.webp' },
+    { id: 12, image: '/animals-optimized/gary-bendig-6GMq7AGxNbE-unsplash.webp' },
+    { id: 13, image: '/animals-optimized/geranimo-bKhETeDV1WM-unsplash.webp' },
+    { id: 14, image: '/animals-optimized/gwen-weustink-I3C1sSXj1i8-unsplash.webp' },
+    { id: 15, image: '/animals-optimized/hans-jurgen-mager-qQWV91TTBrE-unsplash.webp' },
+    { id: 16, image: '/animals-optimized/joel-herzog-ny_5l4QKBnE-unsplash.webp' },
+    { id: 17, image: '/animals-optimized/jonatan-pie-xgTMSz6kegE-unsplash.webp' },
+    { id: 18, image: '/animals-optimized/laura-college-K_Na5gCmh38-unsplash.webp' },
+    { id: 19, image: '/animals-optimized/lukas-souza-vjFC9OjrOtA-unsplash.webp' },
+    { id: 20, image: '/animals-optimized/mark-stoop-JAUFHzqZPd0-unsplash.webp' },
+    { id: 21, image: '/animals-optimized/paweldotio-XWTNFVCTS8E-unsplash.webp' },
+    { id: 22, image: '/animals-optimized/ray-hennessy-xUUZcpQlqpM-unsplash.webp' },
+    { id: 23, image: '/animals-optimized/ricardo-frantz-GvyyGV2uWns-unsplash.webp' },
+    { id: 24, image: '/animals-optimized/satyabratasm-u_kMWN-BWyU-unsplash.webp' },
+    { id: 25, image: '/animals-optimized/sid-balachandran-_9a-3NO5KJE-unsplash.webp' },
+    { id: 26, image: '/animals-optimized/tof-mayanoff-CS5vT_Kin3E-unsplash.webp' },
+    { id: 27, image: '/animals-optimized/wexor-tmg-L-2p8fapOA8-unsplash.webp' },
+    { id: 28, image: '/animals-optimized/wynand-van-poortvliet-4AmyOdXZAQc-unsplash.webp' },
+];

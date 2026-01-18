@@ -7,30 +7,51 @@ interface CardProps {
 }
 
 export function Card({ card, onClick, disabled }: CardProps) {
-    const showFace = card.flipped || card.matched;
+    const isFlipped = card.flipped || card.matched;
 
     return (
         <button
             onClick={onClick}
             disabled={disabled}
             className={`
-        w-full aspect-square rounded-lg overflow-hidden
-        border-2 border-gray-300
-        ${showFace ? 'bg-white' : 'bg-purple-600'}
-        ${card.matched ? 'border-green-500 opacity-75' : ''}
-        hover:scale-105 transition-transform
-        disabled:cursor-not-allowed
-      `}
+                w-full aspect-square
+                [perspective:1000px]
+                disabled:cursor-not-allowed
+            `}
         >
-            {showFace ? (
-                <img
-                    src={card.image}
-                    alt="animal"
-                    className="w-full h-full object-cover"
-                />
-            ) : (
-                <span className="text-4xl text-white">?</span>
-            )}
+            <div className={`
+                relative w-full h-full
+                transition-transform duration-500
+                [transform-style:preserve-3d]
+                ${isFlipped ? '[transform:rotateY(180deg)]' : ''}
+            `}>
+         
+                <div className={`
+                    absolute w-full h-full
+                    [backface-visibility:hidden]
+                    bg-purple-600 rounded-lg
+                    flex items-center justify-center
+                    border-2 border-purple-400
+                    hover:bg-purple-500
+                `}>
+                    <span className="text-4xl text-white">?</span>
+                </div>
+
+
+                <div className={`
+                    absolute w-full h-full
+                    [backface-visibility:hidden]
+                    [transform:rotateY(180deg)]
+                    rounded-lg overflow-hidden
+                    border-2 ${card.matched ? 'border-green-500' : 'border-gray-300'}
+                `}>
+                    <img
+                        src={card.image}
+                        alt="animal"
+                        className="w-full h-full object-cover"
+                    />
+                </div>
+            </div>
         </button>
     );
 }
